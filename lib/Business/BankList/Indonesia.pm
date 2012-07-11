@@ -233,7 +233,7 @@ die "BUG: Can't generate func: $res->[0] - $res->[1]" unless $res->[0] == 200;
 
 This module contains list of banks/financial institutions in Indonesia. Data
 source is currently at: https://github.com/sharyanto/gudang-data-interim
-(data/idn_bank).
+(table/idn_bank).
 
 
 =head1 SEE ALSO
