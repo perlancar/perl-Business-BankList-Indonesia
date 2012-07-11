@@ -3,7 +3,7 @@ package Business::BankList::Indonesia;
 use 5.010;
 use strict;
 use warnings;
-use Perinci::Sub::Gen::AccessTable qw(gen_read_table_func);
+use Perinci::Sub::Gen::AccessTable 0.14 qw(gen_read_table_func);
 
 use Exporter;
 our @ISA = qw(Exporter);
@@ -214,19 +214,12 @@ our $meta = {
 ;
 # END SNIPPET id=meta
 my $res = gen_read_table_func(
+    name => 'list_id_banks',
     table_data => $data,
     table_spec => $meta,
     default_fields => 'name',
 );
-
-die "BUG: Can't generate func: $res->[0] - $res->[1]"
-    unless $res->[0] == 200;
-
-my $spec = $res->[2]{meta};
-$SPEC{list_id_banks} = $spec;
-no warnings;
-*list_id_banks = $res->[2]{code};
-use warnings;
+die "BUG: Can't generate func: $res->[0] - $res->[1]" unless $res->[0] == 200;
 
 1;
 # ABSTRACT: List banks/financial institutions in Indonesia
