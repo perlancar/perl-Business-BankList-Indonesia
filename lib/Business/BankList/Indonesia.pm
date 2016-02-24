@@ -4,7 +4,7 @@ use 5.010001;
 use strict;
 use warnings;
 
-use Perinci::Sub::Gen::AccessTable 0.14 qw(gen_read_table_func);
+use Perinci::Sub::Gen::AccessTable qw(gen_read_table_func);
 
 use Exporter;
 our @ISA = qw(Exporter);
