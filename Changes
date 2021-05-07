@@ -1,3 +1,9 @@
+0.080   2021-05-07  Released-By: PERLANCAR; Urgency: medium; Backward-Incompatible: yes
+
+	- [incompatible change] Rename function list_id_banks() ->
+	  list_idn_banks() to avoid ambiguity of 'id'.
+
+
 0.07    2015-09-03  Released-By: PERLANCAR
 
 	- [dist] Move spec prereqs from RuntimeRequires to
@@ -46,4 +52,3 @@
 0.01    2012-07-06  Released-By: SHARYANTO
 
         - First version.
-
